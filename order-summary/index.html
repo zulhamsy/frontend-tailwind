@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -42,14 +42,14 @@
   >
     <!--Card Container-->
     <div
-      class="rounded-2xl w-[22rem] bg-white shadow-2xl shadow-bright/20 overflow-hidden"
+      class="rounded-2xl w-[22rem] sm:w-[28rem] bg-white shadow-2xl shadow-bright/20 overflow-hidden"
     >
       <!--Illustration-->
       <div
-        class="bg-[url(images/illustration-hero.svg)] bg-center bg-cover w-full aspect-video"
+        class="bg-[url(images/illustration-hero.svg)] bg-center bg-cover w-full aspect-w-16 aspect-h-9 sm:aspect-h-8"
       ></div>
       <!--Content-->
-      <div class="px-6 py-8 space-y-6">
+      <div class="px-6 py-8 sm:px-9 space-y-6">
         <!--Text-->
         <div class="space-y-4">
           <h1 class="font-black text-2xl text-center">Order Summary</h1>
