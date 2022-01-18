@@ -1,62 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+              lexend: ['Lexend Deca', 'sans-serif']
+            },
+            colors: {
+              darkBlue: 'hsl(233, 47%, 7%)',
+              desBlue: 'hsl(244, 38%, 16%)',
+              accent: 'hsl(277, 64%, 61%)',
+              paragraph: 'hsla(0, 0%, 100%, 0.75)',
+              heading: 'hsla(0, 0%, 100%, 0.6)'
+            }
+          }
+        }
+      }
+    </script>
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
-	<script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
-	<script>
-		tailwind.config = {
-			theme: {
-				extend: {
-					fontFamily: {
-						inter: ['Inter', 'sans-serif'],
-						lexend: ['Lexend Deca', 'sans-serif']
-					},
-					colors: {
-						darkBlue: 'hsl(233, 47%, 7%)',
-						desBlue: 'hsl(244, 38%, 16%)',
-						accent: 'hsl(277, 64%, 61%)',
-						paragraph: 'hsla(0, 0%, 100%, 0.75)',
-						heading: 'hsla(0, 0%, 100%, 0.6)'
-					}
-				}
-			}
-		}
-	</script>
-	<title>Frontend Mentor | Stats preview card component</title>
-</head>
-
-<body class="min-h-screen flex flex-col justify-center items-center bg-darkBlue">
-	<main class="bg-desBlue rounded-lg overflow-hidden max-w-min">
-		<!--Image-->
-		<div class="w-[22rem] bg-[url('images/image-mobile.jpg')] bg-cover bg-center aspect-w-16 aspect-h-12 relative after:absolute after:w-full after:h-full after:bg-accent/90 after:mix-blend-multiply"></div>
-		<!--Content-->
-		<div class="py-11 px-5">
-			<h1 class="mb-5 text-center text-white text-3xl font-inter font-bold">Get <span class="text-accent">insights</span> that help your business grow.</h1>
-			<p class="px-6 font-inter text-[15px] text-paragraph text-center">Discover the benefits of data analytics and make better decisions regarding revenue, customer
-				experience, and overall efficience.
-			</p>
-			<!--Stat-->
-			<div>
-				
-			</div>
-		</div>
-	</main>
-	10k+ companies
-	314 templates
-	12m+ queries
-	<footer>
-		<!--Attribution-->
-		<p class="mt-6 text-xs text-paragraph">
-			Challange by
-			<a class="underline" href="https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj">FrontEnd Mentor</a>. Coded by Jul Julham
-		</p>
-	</footer>
-</body>
-
+  <body
+    class="min-h-screen py-4 flex flex-col justify-center items-center bg-darkBlue"
+  >
+    <main
+      class="bg-desBlue rounded-lg shadow-lg shadow-black/20 overflow-hidden max-w-min"
+    >
+      <!--Image-->
+      <div
+        class="w-[22rem] bg-[url('images/image-mobile.jpg')] bg-cover bg-center aspect-w-16 aspect-h-12 relative after:absolute after:w-full after:h-full after:bg-accent/90 after:mix-blend-multiply"
+      ></div>
+      <!--Content-->
+      <div class="py-11 px-5">
+        <h1 class="mb-5 text-center text-white text-3xl font-inter font-bold">
+          Get <span class="text-accent">insights</span> that help your business
+          grow.
+        </h1>
+        <p class="px-6 mb-8 font-inter text-[15px] text-paragraph text-center">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficience.
+        </p>
+        <!--Stat-->
+        <div class="flex flex-col items-center text-center gap-8">
+          <!-- 10K Companies -->
+          <div class="space-y-1">
+            <p class="text-3xl text-white font-inter font-bold">10k+</p>
+            <p
+              class="font-lexend text-heading uppercase tracking-wide text-[15px]"
+            >
+              companies
+            </p>
+          </div>
+          <!-- 314 Templates -->
+          <div class="space-y-1">
+            <p class="text-3xl text-white font-inter font-bold">314</p>
+            <p
+              class="font-lexend text-heading uppercase tracking-wide text-[15px]"
+            >
+              templates
+            </p>
+          </div>
+          <!-- 12M Queries -->
+          <div class="space-y-1">
+            <p class="text-3xl text-white font-inter font-bold">12M+</p>
+            <p
+              class="font-lexend text-heading uppercase tracking-wide text-[15px]"
+            >
+              queries
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!--Attribution-->
+      <p class="mt-6 text-xs text-accent/80">
+        Challange by
+        <a
+          class="underline"
+          href="https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj"
+          >FrontEnd Mentor</a
+        >. Coded by Jul Julham
+      </p>
+    </footer>
+  </body>
 </html>
