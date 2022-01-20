@@ -1,67 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lexend: ['Lexend Deca', 'sans-serif'],
+              display: ['Big Shoulders Display', 'cursive']
+            },
+            colors: {
+              p_orange: 'hsl(31, 77%, 52%)',
+              p_cyan: 'hsl(184, 100%, 22%)',
+              p_dark: 'hsl(179, 100%, 13%)',
+              n_white: 'hsla(0, 0%, 100%, 0.75)',
+              n_light: 'hsl(0, 0%, 95%)'
+            }
+          }
+        }
+      }
+    </script>
+    <title>Frontend Mentor | 3-column preview card component</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script>
-		tailwind.config = {
-			theme: {
-				extend: {
-					fontFamily: {
-						lexend: ['Lexend Deca', 'sans-serif'],
-						display: ['Big Shoulders Display', 'cursive']
-					},
-					colors: {
-						p_orange: 'hsl(31, 77%, 52%)',
-						p_cyan: 'hsl(184, 100%, 22%)',
-						p_dark: 'hsl(179, 100%, 13%)',
-						n_white: 'hsla(0, 0%, 100%, 0.75)',
-						n_light: 'hsl(0, 0%, 95%)'
-					}
-				}
-			}
-		}
-	</script>
-	<title>Frontend Mentor | 3-column preview card component</title>
-</head>
-
-<body class="min-h-screen py-3 flex flex-col justify-center items-center bg-n_light">
-	<main class="max-w-xs rounded-lg overflow-hidden sm:flex sm:min-w-fit">
-		<!--Sedans-->
-		<section class="bg-p_orange p-12 sm:max-w-[18rem] sm:flex sm:flex-col">
-			<img src="./images/icon-sedans.svg" alt="sedans" class="mb-7 sm:self-start">
-			<h1 class="text-n_light font-display font-bold text-[2.5rem] uppercase mb-6">Sedans</h1>
-			<p class="text-[15px] font-lexend text-n_white mb-6">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
-			<button class="text-[15px] font-lexend text-p_orange bg-n_light px-8 py-3 rounded-full border-2 border-transparent hover:bg-p_orange hover:border-n_light hover:text-n_light sm:self-start sm:justify-self-end">Learn More</button>
-		</section>
-		<!--SUV-->
-		<section class="bg-p_cyan p-12 sm:max-w-[18rem] sm:flex sm:flex-col">
-			<img src="./images/icon-suvs.svg" alt="suvs" class="mb-7 sm:self-start">
-			<h1 class="text-n_light font-display font-bold text-[2.5rem] uppercase mb-6">SUVS</h1>
-			<p class="text-[15px] font-lexend text-n_white mb-6">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
-			<button class="text-[15px] font-lexend text-p_cyan bg-n_light px-8 py-3 rounded-full border-2 border-transparent hover:bg-p_cyan hover:border-n_light hover:text-n_light sm:self-start">Learn More</button>
-		</section>
-		<!--Luxury-->
-		<section class="bg-p_dark p-12 sm:max-w-[18rem]">
-			<img src="./images/icon-luxury.svg" alt="luxury" class="mb-7">
-			<h1 class="text-n_light font-display font-bold text-[2.5rem] uppercase mb-6">Luxury</h1>
-			<p class="text-[15px] font-lexend text-n_white mb-6">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
-			<button class="text-[15px] font-lexend text-p_dark bg-n_light px-8 py-3 rounded-full border-2 border-transparent hover:bg-p_dark hover:border-n_light hover:text-n_light">Learn More</button>
-		</section>
-	</main>
-	<footer>
-		<!--Attribution-->
-		<p class="mt-6 text-xs text-p_dark/80">
-			Challange by
-			<a class="underline" target="_blank" href="https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj">FrontEnd Mentor</a>. Coded by Jul Julham
-		</p>
-	</footer>
-</body>
-
+  <body
+    class="min-h-screen py-3 flex flex-col justify-center items-center bg-n_light"
+  >
+    <main class="max-w-xs rounded-lg overflow-hidden lg:flex lg:min-w-fit">
+      <!--Sedans-->
+      <section
+        class="bg-p_orange p-12 lg:p-10 lg:max-w-[18rem] lg:flex lg:flex-col"
+      >
+        <img
+          src="./images/icon-sedans.svg"
+          alt="sedans"
+          class="mb-7 lg:self-start"
+        />
+        <h1
+          class="text-n_light font-display font-bold text-[2.5rem] uppercase mb-6"
+        >
+          Sedans
+        </h1>
+        <p class="text-[15px] font-lexend text-n_white mb-6">
+          Choose a sedan for its affordability and excellent fuel economy. Ideal
+          for cruising in the city or on your next road trip.
+        </p>
+        <button
+          class="text-[15px] font-lexend text-p_orange bg-n_light px-8 py-3 rounded-full border-2 border-transparent hover:bg-p_orange hover:border-n_light hover:text-n_light lg:self-start lg:mt-auto"
+        >
+          Learn More
+        </button>
+      </section>
+      <!--SUV-->
+      <section
+        class="bg-p_cyan p-12 lg:p-10 lg:max-w-[18rem] lg:flex lg:flex-col"
+      >
+        <img
+          src="./images/icon-suvs.svg"
+          alt="suvs"
+          class="mb-7 lg:self-start"
+        />
+        <h1
+          class="text-n_light font-display font-bold text-[2.5rem] uppercase mb-6"
+        >
+          SUVS
+        </h1>
+        <p class="text-[15px] font-lexend text-n_white mb-6">
+          Take an SUV for its spacious interior, power, and versatility. Perfect
+          for your next family vacation and off-road adventures.
+        </p>
+        <button
+          class="text-[15px] font-lexend text-p_cyan bg-n_light px-8 py-3 rounded-full border-2 border-transparent hover:bg-p_cyan hover:border-n_light hover:text-n_light lg:self-start lg:mt-auto"
+        >
+          Learn More
+        </button>
+      </section>
+      <!--Luxury-->
+      <section
+        class="bg-p_dark p-12 lg:p-10 lg:pr-8 lg:max-w-[18rem] lg:flex lg:flex-col"
+      >
+        <img
+          src="./images/icon-luxury.svg"
+          alt="luxury"
+          class="mb-7 lg:self-start"
+        />
+        <h1
+          class="text-n_light font-display font-bold text-[2.5rem] uppercase mb-6"
+        >
+          Luxury
+        </h1>
+        <p class="text-[15px] font-lexend text-n_white mb-6 lg:mb-20">
+          Cruise in the best car brands without the bloated prices. Enjoy the
+          enhanced comfort of a luxury rental and arrive in style.
+        </p>
+        <button
+          class="text-[15px] font-lexend text-p_dark bg-n_light px-8 py-3 rounded-full border-2 border-transparent hover:bg-p_dark hover:border-n_light hover:text-n_light lg:self-start"
+        >
+          Learn More
+        </button>
+      </section>
+    </main>
+    <footer>
+      <!--Attribution-->
+      <p class="mt-6 text-xs text-p_dark/80">
+        Challange by
+        <a
+          class="underline"
+          target="_blank"
+          href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-"
+          >FrontEnd Mentor</a
+        >. Coded by Jul Julham
+      </p>
+    </footer>
+  </body>
 </html>
