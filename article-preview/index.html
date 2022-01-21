@@ -30,23 +30,35 @@
 </head>
 
 <body class="font-manrope bg-light_blue min-h-screen py-4 flex flex-col justify-center items-center">
-	<main class="rounded-lg overflow-hidden">
+	<main class="rounded-lg overflow-hidden max-w-min bg-white shadow-lg shadow-very_dark/5">
 		<!--Image-->
 		<div class="bg-[url('images/drawers.jpg')] bg-top bg-cover w-80 h-52"></div>
+		<!--Text Content-->
+		<div class="px-8 pt-9 pb-4">
+			<h1 class="font-bold text-very_dark mb-3">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+			<p class="text-des_blue font-normal text-[13px] leading-relaxed">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+			</p>
+		</div>
+		<!--Share Control-->
+		<div class="px-8 py-5 flex items-center gap-4">
+			<!--Avatar-->
+			<div class="rounded-full h-10 w-10 bg-[url('images/avatar-michelle.jpg')] bg-contain"></div>
+			<!--Avatar Info-->
+			<div class="text-[13px]">
+				<p class="font-bold text-very_dark">Michelle Appleton</p>
+				<p class="text-gray_blue">28 Jun 2020</p>
+			</div>
+			<!--Share Button-->
+			<div class="ml-auto">
+				<input type="checkbox" name="share" id="share" class="hidden" />
+				<label for="share" class="rounded-full w-8 h-8 bg-light_blue flex justify-center items-center group">
+					<svg class="group-hover:fill-white" fill="#6e8098" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+						<path d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+					</svg>
+				</label>
+			</div>
+		</div>
 	</main>
-
-	<!--Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share-->
-
 	<footer>
 		<!--Attribution-->
 		<p class="mt-6 text-xs text-des_blue/80">
