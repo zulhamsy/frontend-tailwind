@@ -1,19 +1,22 @@
 const share = document.getElementById('share')
 const body = document.querySelector('body')
-const control = document.getElementById('control')
+const controlContainer = document.getElementById('control')
 const shareIcon = document.getElementById('shareicon')
 const shareControl = document.getElementById('share-control')
+
+const classToggle = ['opacity-100', 'top-0']
 
 // toggle share tooltip
 share.addEventListener('click', function() {
 	share.classList.toggle('bg-des_blue')
 	shareIcon.classList.toggle('fill-white')
-	shareControl.classList.toggle('opacity-100')
-	shareControl.classList.toggle('top-0')
+	classToggle.map((classItem) => {
+		shareControl.classList.toggle(classItem)
+	})
 })
 
 // prevent untoggling from control
-control.addEventListener('click', function(e) {
+controlContainer.addEventListener('click', function(e) {
 	e.stopPropagation()
 })
 
@@ -21,6 +24,7 @@ control.addEventListener('click', function(e) {
 body.addEventListener('click', function() {
 	share.classList.remove('bg-des_blue')
 	shareIcon.classList.remove('fill-white')
-	shareControl.classList.remove('opacity-100')
-	shareControl.classList.remove('top-0')
+	classToggle.map((classItem) => {
+		shareControl.classList.remove(classItem)
+	})
 })
