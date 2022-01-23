@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              outift: ['Outfit', 'sans-serif']
+            },
+            colors: {
+              light: 'hsl(212, 45%, 89%)',
+              grayish: 'hsl(220, 15%, 55%)',
+              dark: 'hsl(218, 44%, 22%)'
+            }
+          }
+        }
+      }
+    </script>
+    <title>Frontend Mentor | QR code component</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script>
-		tailwind.config = {
-			theme: {
-				extend: {
-					fontFamily: {
-						outift: ['Outfit', 'sans-serif']
-					},
-					colors: {
-						light: 'hsl(212, 45%, 89%)',
-						grayish: 'hsl(220, 15%, 55%)',
-						dark: 'hsl(218, 44%, 22%)'
-					}
-				}
-			}
-		}
-	</script>
-	<title>Frontend Mentor | QR code component</title>
-</head>
-
-<body class="bg-light font-outfit min-h-screen flex flex-col justify-center items-center py-4">
-	<main class="bg-white px-4 pt-4 pb-8 rounded-xl w-72">
-		<!--Image-->
-		<img src="images/image-qr-code.png" alt="QR Code" class="min-w-full rounded-xl mb-6" />
-		<!--Text Content-->
-		<h1 class="text-dark font-bold text-xl text-center px-3 mb-4">Improve your front-end skills by building projects</h1>
-		<p class="text-grayish text-[15px] text-center">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-	</main>
-	<footer>
-		<!--Attribution-->
-		<p class="mt-6 text-xs text-dark/80">
-			Challange by
-			<a class="underline" target="_blank" href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H">FrontEnd Mentor</a>. Coded by Jul Julham
-		</p>
-	</footer>
-</body>
-
+  <body
+    class="bg-light font-outfit min-h-screen flex flex-col justify-center items-center py-4"
+  >
+    <main class="bg-white px-4 pt-4 pb-8 rounded-xl w-80">
+      <!--Image-->
+      <img
+        src="images/image-qr-code.png"
+        alt="QR Code"
+        class="min-w-full rounded-xl mb-6"
+      />
+      <!--Text Content-->
+      <h1 class="text-dark font-bold text-xl text-center px-3 mb-4">
+        Improve your front-end skills by building projects
+      </h1>
+      <p class="text-grayish text-[15px] text-center px-3">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        the next level
+      </p>
+    </main>
+    <footer>
+      <!--Attribution-->
+      <p class="mt-6 text-xs text-dark/80">
+        Challange by
+        <a
+          class="underline"
+          target="_blank"
+          href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H"
+          >FrontEnd Mentor</a
+        >. Coded by Jul Julham
+      </p>
+    </footer>
+  </body>
 </html>
