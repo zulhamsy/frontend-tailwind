@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Four card feature section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						poppins: ['Poppins', 'sans-serif']
+					},
+					colors: {
+						p_red: 'hsl(0, 78%, 62%)',
+						p_cyan: 'hsl(180, 62%, 55%)',
+						p_orange: 'hsl(34, 97%, 64%)',
+						p_blue: 'hsl(212, 86%, 64%)',
+						n_dark: 'hsl(234, 12%, 34%)',
+						n_gray: 'hsl(229, 6%, 66%)',
+						n_light: 'hsl(0, 0%, 98%)'
+					}
+				}
+			}
+		}
+	</script>
+	<title>Frontend Mentor | Four card feature section</title>
 </head>
-<body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
+
+<body class="bg-n_light min-h-screen flex flex-col justify-center items-center py-4 font-poppins">
+	<main>
+		<!--Hero Title-->
+		<h1 class="text-center font-extralight text-n_dark text-2xl w-[25ch] leading-relaxed">Reliable, efficient delivery <span class="font-semibold">Powered by Technology</span></h1>
+	</main>
+	<!--
 
   Our Artificial Intelligence powered tools use millions of project data points 
   to ensure that your project is successful
@@ -32,14 +52,14 @@
   Regularly evaluates our talent to ensure quality
 
   Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  Uses data from past projects to provide better delivery estimates-->
+	<footer>
+		<!--Attribution-->
+		<p class="mt-6 text-xs text-n_dark/80">
+			Challange by
+			<a class="underline" target="_blank" href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H">FrontEnd Mentor</a>. Coded by Jul Julham
+		</p>
+	</footer>
 </body>
+
 </html>
